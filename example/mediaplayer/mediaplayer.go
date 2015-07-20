@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"log"
 
-	ole "github.com/go-ole/go-ole"
-	"github.com/go-ole/go-ole/oleutil"
+	ole "github.com/ratsil/go-ole"
+	"github.com/ratsil/go-ole/oleutil"
 )
 
 func main() {

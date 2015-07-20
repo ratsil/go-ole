@@ -7,8 +7,8 @@ import (
 	"os"
 	"strings"
 
-	ole "github.com/go-ole/go-ole"
-	"github.com/go-ole/go-ole/oleutil"
+	ole "github.com/ratsil/go-ole"
+	"github.com/ratsil/go-ole/oleutil"
 	"github.com/gonuts/commander"
 )
 
