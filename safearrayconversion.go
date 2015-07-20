@@ -18,6 +18,17 @@ func (sac *SafeArrayConversion) ToStringArray() (strings []string) {
 
 	return
 }
+func (sac *SafeArrayConversion) ToIDispatchArray() (dispatches []*IDispatch) {
+	totalElements, _ := sac.TotalElements(0)
+	dispatches = make([]*IDispatch, totalElements)
+
+	for i := int64(0); i < totalElements; i++ {
+		ptr, _ := safeArrayGetElement(sac.Array, i)
+		dispatches[int32(i)] = (*IDispatch)(unsafe.Pointer(ptr))
+	}
+
+	return
+}
 
 func (sac *SafeArrayConversion) ToByteArray() (bytes []byte) {
 	totalElements, _ := sac.TotalElements(0)
